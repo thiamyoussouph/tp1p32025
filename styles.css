@@ -1,0 +1,243 @@
+/* #rouge{
+    color: red;
+    font-size: 3rem;
+}
+.couleurbleu{
+    color: blue;
+    font-size: 2rem;
+} */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Couleur de fond claire */
+    }
+ .menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    opacity: 90%;
+    
+ }
+.menu ul {
+    display: flex;
+}
+.menu ul li{
+    padding: 12px;
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu ul li a:hover{
+    color: red;
+    background-color: white;
+    font-weight: bold;
+}
+.baniere {
+  background-image: url("images/fille-de-smiley-dans-un-studio-de-reglage-d-ete.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+}
+.texte-defilement span {
+  font-weight: bold;
+  position: relative;
+  color: orange;
+  overflow: hidden;
+}
+
+/* Balayage lumineux */
+.texte-defilement span {
+  color: orange;
+  font-weight: bold;
+  display: inline-block;
+  animation: glowZoom 2s ease-in-out infinite;
+}
+
+/* Animation douce, avec lumière et zoom léger mais visible */
+@keyframes glowZoom {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 5px orange;
+    color: orange;
+  }
+  50% {
+    transform: scale(1.4);
+    text-shadow: 0 0 20px yellow, 0 0 30px orange;
+    color: #FFD700; /* or jaune doré */
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px orange;
+    color: orange;
+  }
+}
+.contenaire {
+  display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+
+}
+.centre  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.centre  table th,
+.centre  table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+.gauche input {
+margin-top: 5%;
+}
+.gauche,
+.droite {
+  width: 10%; /* largeur fixe sur les côtés */
+}
+.centre {
+  flex-grow: 1; /* prend tout l’espace restant */
+}
+
+.footer {
+    display: flex;
+  background-color: #333;       /* fond gris foncé */
+  color: white;                 /* texte blanc */
+  text-align: center;          /* texte centré */
+  padding: 20px 0;             /* espace intérieur haut/bas */
+  font-size: 14px;     
+          /* taille de texte simple */
+}
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 14px;
+  gap: 20px;
+}
+
+.footer a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer > div {
+  flex: 1;
+  min-width: 250px; /* pour gérer l'affichage responsive */
+}
+
+.social-media {
+  text-align: center;
+}
+
+.social-media a {
+  display: inline-block;
+  margin: 10px;
+}
+
+
+.social-media img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+  transform: scale(1.2);
+}
+
+/* ✅ RESPONSIVE GLOBAL */
+@media screen and (max-width: 768px) {
+  /* Le menu devient vertical sur mobile */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .menu ul li {
+    padding: 10px 0;
+  }
+
+  /* Le contenaire devient en colonne */
+  .contenaire {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gauche,
+  .droite {
+    width: 100%;
+    text-align: center;
+  }
+
+  .centre {
+    width: 100%;
+  }
+
+  /* Le footer devient en colonne */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer > div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .baniere {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  .texte-defilement {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .baniere {
+    height: auto; /* la hauteur s’adapte au contenu */
+    padding: 60px 20px;
+    background-size: cover; /* mieux pour mobile : on voit toute l’image */
+    background-repeat: no-repeat;
+  }
+
+  .texte-defilement {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+
